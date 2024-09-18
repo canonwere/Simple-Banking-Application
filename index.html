@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Banking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bank-container">
+        <h1>Simple Banking Application</h1>
+        <div class="balance-section">
+            <p>Current Balance: $<span id="balance">0.00</span></p>
+        </div>
+
+        <div class="transaction-section">
+            <h2>Make a Transaction</h2>
+            <input type="number" id="amountInput" placeholder="Enter amount">
+            <button id="depositButton">Deposit</button>
+            <button id="withdrawButton">Withdraw</button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
