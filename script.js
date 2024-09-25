@@ -51,4 +51,45 @@ document.addEventListener("DOMContentLoaded", function() {
         showMessage(`Withdrew $${amount.toFixed(2)} successfully!`);
         amountInput.value = "";
     });
+    const historyList = document.getElementById("historyList");
+
+function updateHistory(transactionType, amount) {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${transactionType}: $${amount.toFixed(2)}`;
+    historyList.appendChild(listItem);
+}
+
+depositButton.addEventListener("click", function() {
+    const amount = parseFloat(amountInput.value);
+    if (isNaN(amount) || amount <= 0) {
+        showMessage("Please enter a valid amount!", true);
+        return;
+    }
+
+    balance += amount;
+    updateBalance();
+    showMessage(`Deposited $${amount.toFixed(2)} successfully!`);
+    updateHistory('Deposit', amount); // Log to history
+    amountInput.value = "";
+});
+
+withdrawButton.addEventListener("click", function() {
+    const amount = parseFloat(amountInput.value);
+    if (isNaN(amount) || amount <= 0) {
+        showMessage("Please enter a valid amount!", true);
+        return;
+    }
+
+    if (amount > balance) {
+        showMessage("Insufficient funds!", true);
+        return;
+    }
+
+    balance -= amount;
+    updateBalance();
+    showMessage(`Withdrew $${amount.toFixed(2)} successfully!`);
+    updateHistory('Withdraw', amount); // Log to history
+    amountInput.value = "";
+});
+
 });
