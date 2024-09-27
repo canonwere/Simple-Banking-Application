@@ -76,3 +76,35 @@ button:hover {
     margin: 5px 0;
     font-size: 16px;
 }
+/* Account Holder Section */
+.account-section {
+    margin-bottom: 20px;
+}
+
+#accountHolderInput {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+
+/* Reset Button Style */
+button#resetButton {
+    background-color: #ff9800;
+    margin-top: 10px;
+}
+
+/* Transaction History Style */
+.transaction-history {
+    margin-top: 20px;
+}
+
+.transaction-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-history li {
+    margin: 5px 0;
+    font-size: 16px;
+}
