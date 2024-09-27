@@ -19,10 +19,43 @@
             <button id="depositButton">Deposit</button>
             <button id="withdrawButton">Withdraw</button>
         </div>
-<div class="transaction-history">
-    <h2>Transaction History</h2>
-    <ul id="historyList"></ul>
-</div>
+<div class="bank-container">
+        <h1>Simple Banking Application</h1>
+
+        <!-- Account Holder Section -->
+        <div class="account-section">
+            <h2>Account Holder</h2>
+            <input type="text" id="accountHolderInput" placeholder="Enter your name">
+            <button id="saveAccountHolderButton">Save</button>
+            <p>Account Holder: <span id="accountHolderName">Unknown</span></p>
+        </div>
+
+        <!-- Balance Section -->
+        <div class="balance-section">
+            <p>Current Balance: $<span id="balance">0.00</span></p>
+        </div>
+
+        <!-- Transaction Section -->
+        <div class="transaction-section">
+            <h2>Make a Transaction</h2>
+            <input type="number" id="amountInput" placeholder="Enter amount">
+            <button id="depositButton">Deposit</button>
+            <button id="withdrawButton">Withdraw</button>
+        </div>
+
+        <!-- Reset Button -->
+        <button id="resetButton">Reset Balance</button>
+
+        <!-- Transaction History Section -->
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul id="historyList"></ul>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
 
         <div id="message" class="message"></div>
     </div>
