@@ -1,0 +1,96 @@
+/* Simple Banking Application — Custom Styles
+   Tailwind CDN handles layout/utilities; this file covers gaps. */
+
+/* ── Transaction colours ──────────────────────── */
+.tx-deposit  { color: #16a34a; }
+.tx-withdraw { color: #dc2626; }
+.tx-transfer { color: #ea580c; }
+
+/* ── Stat cards ───────────────────────────────── */
+.stat-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Table rows ───────────────────────────────── */
+.tx-row { transition: background 0.1s; }
+.tx-row:hover { background-color: #f8fafc; }
+
+/* ── Auth pages ───────────────────────────────── */
+.auth-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    padding: 44px 40px;
+    width: 100%;
+    max-width: 440px;
+}
+
+/* ── Form controls ────────────────────────────── */
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #fff;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+.form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+.form-input.font-mono { font-family: 'Courier New', Courier, monospace; }
+
+/* ── Buttons ──────────────────────────────────── */
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 11px 20px;
+    background: #1d4ed8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-primary:hover  { background: #1e40af; }
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-success { background: #16a34a; }
+.btn-success:hover { background: #15803d; }
+
+.btn-danger  { background: #dc2626; }
+.btn-danger:hover  { background: #b91c1c; }
+
+.btn-warning { background: #ea580c; }
+.btn-warning:hover { background: #c2410c; }
+
+/* ── Flash auto-fade ──────────────────────────── */
+.flash-message { transition: opacity 0.5s ease; }
+
+/* ── Dollar prefix input ──────────────────────── */
+.input-prefix {
+    position: relative;
+}
+.input-prefix span {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-weight: 500;
+    pointer-events: none;
+}
+.input-prefix input { padding-left: 28px; }
